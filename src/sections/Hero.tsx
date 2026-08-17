@@ -24,7 +24,7 @@ export function Hero() {
           phase >= 1 ? "opacity-100" : "opacity-0"
         }`}
       >
-        <div className="absolute inset-x-0 top-[8%] mx-auto h-[70vh] w-full max-w-[1400px]">
+        <div className="absolute inset-x-0 top-[6%] mx-auto h-[62svh] w-full max-w-[1050px]">
           <PcbCanvas seed={11} spin={0.1} />
         </div>
         <div className="absolute inset-0 bg-background/45" />
