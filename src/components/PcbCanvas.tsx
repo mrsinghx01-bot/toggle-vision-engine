@@ -162,7 +162,7 @@ export function PcbCanvas({
       ctx.beginPath();
       pc.forEach((p, i) => (i ? ctx.lineTo(p.x, p.y) : ctx.moveTo(p.x, p.y)));
       ctx.closePath();
-      const g = ctx.createLinearGradient(pc[0].x, pc[0].y, pc[2].x, pc[2].y);
+      const g = ctx.createLinearGradient(pc[0]!.x, pc[0]!.y, pc[2]!.x, pc[2]!.y);
       g.addColorStop(0, "oklch(0.26 0.05 158 / 0.92)");
       g.addColorStop(1, "oklch(0.19 0.03 160 / 0.92)");
       ctx.fillStyle = g;
@@ -233,10 +233,10 @@ export function PcbCanvas({
         for (let i = 0; i < 4; i++) {
           const j = (i + 1) % 4;
           ctx.beginPath();
-          ctx.moveTo(pb[i].x, pb[i].y);
-          ctx.lineTo(pb[j].x, pb[j].y);
-          ctx.lineTo(pt[j].x, pt[j].y);
-          ctx.lineTo(pt[i].x, pt[i].y);
+          ctx.moveTo(pb[i]!.x, pb[i]!.y);
+          ctx.lineTo(pb[j]!.x, pb[j]!.y);
+          ctx.lineTo(pt[j]!.x, pt[j]!.y);
+          ctx.lineTo(pt[i]!.x, pt[i]!.y);
           ctx.closePath();
           ctx.fillStyle = "oklch(0.2 0.01 160 / 0.95)";
           ctx.fill();
