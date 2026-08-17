@@ -12,8 +12,8 @@ export function Problem() {
     const radius = 34 + (i % 3) * 5;
     return {
       label,
-      x: 50 + Math.cos(angle) * radius,
-      y: 50 + Math.sin(angle) * radius * 0.72,
+      x: Math.round((50 + Math.cos(angle) * radius) * 100) / 100,
+      y: Math.round((50 + Math.sin(angle) * radius * 0.72) * 100) / 100,
     };
   });
 
