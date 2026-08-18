@@ -178,7 +178,7 @@ export function makeBoardTexture(board: BoardDef, nets: NetPath[], flipV = false
   };
   nets.forEach((p, i) => {
     drawPath(p, 0.5, "#000000", 0.22);
-    drawPath(p, 0.35, i % 3 === 0 ? "#caa15f" : "#a8考".slice(0, 0) + "#b2854a", 0.55);
+    drawPath(p, 0.35, i % 3 === 0 ? "#caa15f" : "#b2854a", 0.55);
   });
   ctx.globalAlpha = 1;
 
